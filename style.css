@@ -2,31 +2,33 @@
 /*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
 coloque nas sessões indicadas*/
 
-:root{
-    /*Insira a variavel das outras cores inspecionando o modelo do figma*/
-    /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
-   --cor-de-fundo: #F5F5F5;
-   --cor-de-link: #000;
-   --cor-titulos: #464646;
-   --cor-fundo-azul: #eaf2fd;
-   --cor-caixas: #fbfbfb;
-   --cor-botoes: #2a7ae4;
+:root {
+  /*Insira a variavel das outras cores inspecionando o modelo do figma*/
+  /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
+  --cor-de-fundo: #f5f5f5;
+  --cor-de-link: #000;
+  --cor-titulos: #464646;
+  --cor-fundo-azul: #eaf2fd;
+  --cor-caixas: #fbfbfb;
+  --cor-botoes: #2a7ae4;
 }
 
 body {
-    box-sizing: border-box;
-    background-color: var(--cor-de-fundo) ;
-    font-family: 'Raleway';
-    margin: 0;
-    padding: 0;
-    line-height: 1;
+  box-sizing: border-box;
+  background-color: var(--cor-de-fundo);
+  font-family: 'Raleway';
+  margin: 0;
+  padding: 0;
+  line-height: 1;
 }
-ol, ul,li {
-    list-style: none;
+ol,
+ul,
+li {
+  list-style: none;
 }
-a{
-    text-decoration: none;
-    color: var(--cor-de-link);
+a {
+  text-decoration: none;
+  color: var(--cor-de-link);
 }
 
 /*Neste desafio, gostariamos que praticassem a metodologia BEM, caso seintam a vontade 
@@ -44,50 +46,163 @@ https://en.bem.info/methodology/quick-start/*/
 
 /*Sessão Menu*/
 
-section.menu{
-
+header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
 }
 
+section.menu {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  align-items: center;
+}
+
+.menu__list {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+}
 /*Sessão Title*/
 
-section.title{
-
+section.title {
+  display: flex;
+  background-color: var(--cor-de-fundo);
+  padding: 5rem;
 }
 
+.title__network {
+  display: flex;
+  gap: 2rem;
+  font-size: 16px;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.title__div {
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+}
+
+.title__bio {
+  font-size: 52px;
+}
+
+.title__subsection {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.title__profile {
+  order: 1;
+}
 /*Sessão About*/
 
-section.about{
+section.about {
+  background-color: var(--cor-fundo-azul);
+  padding: 5rem;
+}
 
+.about__title {
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.about__paragraph {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+/*Sessão Skills*/
+
+#skills {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+section.skills {
+  text-align: center;
+}
+
+.skills__line {
+  padding: 2rem, 5rem, 5rem;
+  display: grid;
+  grid-template-columns: 15% 15% 15% 15% 15% 15%;
+  justify-content: center;
+}
+
+.skills__box {
+  background-color: var(--cor-caixas);
+  margin: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  height: 12rem;
+}
+
+.skills__name {
+  font-weight: 700;
+  font-size: 16px;
+  margin-top: 0.5rem;
 }
 
 /*Sessão Hobbies*/
 
-section.hobbies{
-    
+.hobbies__title {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+section.hobbies {
+  text-align: center;
+}
+
+.hobbies__line {
+  padding: 2rem, 5rem, 5rem;
+  display: grid;
+  grid-template-columns: 15% 15% 15% 15% 15% 15%;
+  justify-content: center;
+}
+
+.hobbies__box {
+  background-color: var(--cor-caixas);
+  margin: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  height: 12rem;
+}
+
+.hobbies__name {
+  font-weight: 700;
+  font-size: 16px;
+  margin-top: 0.5rem;
 }
 
 /* Experiência Acadêmica*/
 
-section.academic{
-
+section.academic {
 }
 
 /* experiência*/
 
-section.experience{
-
+section.experience {
 }
 
 /*Contato*/
 
-section.formcontato{
-
+section.formcontato {
 }
 
 /*footeer*/
 
-section.footer{
-   
+section.footer {
 }
 
 /* Chegou a hora de se desafiar com a responsividade, 
@@ -95,40 +210,36 @@ utilize como referência os breakpoints @media abaixo*/
 
 /*Tablet*/
 @media (min-width: 768px) {
+  /* Menu */
 
-/* Menu */
+  /*title*/
 
-/*title*/
+  /*Skills*/
 
-/*Skills*/
+  /*Hobbies*/
 
-/*Hobbies*/
+  /*Experiências acadêmicas*/
 
-/*Experiências acadêmicas*/
-
-/*Expeirência profissional*/
-
+  /*Expeirência profissional*/
 }
 
 /*Mobile*/
 @media (min-width: 425px) {
+  /*Menu*/
 
-/*Menu*/
+  /*Titulo*/
 
-/*Titulo*/
+  /*Sessão sobre*/
 
-/*Sessão sobre*/
+  /*Skills*/
 
-/*Skills*/
+  /*Hobbies*/
 
-/*Hobbies*/
- 
-/*Formação Acadêmica*/
+  /*Formação Acadêmica*/
 
-/*Experiência Profissional*/
+  /*Experiência Profissional*/
 
- /*Contato*/
+  /*Contato*/
 
-/*Footer*/
-
+  /*Footer*/
 }

@@ -1,1 +1,2 @@
-//Seu JavaScript de validação aqui
+const nomeForm = document.querySelector('[data-form]')
+console.log(nomeForm)

@@ -31,7 +31,7 @@
                 <li class="menu__list__item"><a href="#hobbies">Hobbies</a></li>
                 <li class="menu__list__item"><a href="#formacao">Formações e Cursos</a></li>
                 <li class="menu__list__item"><a href="#xp">Experiência</a></li>
-                <li class="menu__list__item"><a href="#contato">Contato@fulana.com</a></li>
+                <li class="menu__list__item" id="contato"><a href="#contato">Contato@fulana.com</a></li>
             </ul>
         </nav>
     </section>
@@ -169,22 +169,22 @@
             <div class="academic__courses__box" id="box1">
                 <ul class="academic__courses__list">
                     <li class="academic__courses__item__img"><img src="./assets/senai-logo.png" width="250rem" height="90rem"></li>
-                    <li class="academic__courses__item__title"><h4>Análise de dados</h4></li>
-                    <li class="academic__courses__item__subtitle"><p>2018 - UFPR</p></li>
+                    <li class="academic__courses__item__title"><h4>Técnico em manutenção eletroeletrônica</h4></li>
+                    <li class="academic__courses__item__subtitle"><p>2018 - SENAI</p></li>
                 </ul>
             </div>
             <div class="academic__courses__box" id="box2">
                 <ul class="academic__courses__list">
                     <li class="academic__courses__item__img"><img src="./assets/logo_alura.svg" width="250rem" height="120rem"></li>
-                    <li class="academic__courses__item__title"><h4>Formação ux Design</h4></li>
-                    <li class="academic__courses__item__subtitle"><p>2019 - Alura</p></li>
+                    <li class="academic__courses__item__title"><h4>Formação Oracle ONE</h4></li>
+                    <li class="academic__courses__item__subtitle"><p>2022 - Alura</p></li>
                 </ul>
             </div>
             <div class="academic__courses__box" id="box3">
                 <ul class="academic__courses__list">
                     <li class="academic__courses__item__img"><img src="./assets/uninter-logo-5.png" width="200rem" height="100rem"></li>
-                    <li class="academic__courses__item__title"><h4>Pós-graduação design</h4></li>
-                    <li class="academic__courses__item__subtitle"><p>Em andamento - UFRJ</p></li>
+                    <li class="academic__courses__item__title"><h4>Analise e desenvolvimento de sistemas</h4></li>
+                    <li class="academic__courses__item__subtitle"><p>Em andamento - Uninter</p></li>
                 </ul>
             </div>
         </div>
@@ -248,12 +248,24 @@
                     <h2 class="formcontato__title">Contato</h2>
                     <h3 class="formcontato__subtext">Quer entrar em contato comigo?</h3>
                     <h3 class="formcontato__subtext">Preencha o formulário ao lado e entrarei em contato o mais rápido possível. </h3>
-                    <form class="formcontato__form">
-                        <input class="formcontato__input" type="text" id="nome" placeholder="Nome" data-="data-form">
-                        <input class="formcontato__input" type="email" id="email" placeholder="Email">
-                        <input class="formcontato__input" type="text" id="assunto" placeholder="Assunto">
-                        <textarea class="formcontato__textarea" rows="5" cols="40" id="mensagem" name="mensagem" placeholder="Sua mensagem"></textarea>
-                        <button class="formcontato__botao">Enviar mensagem</button>
+                    <form class="formcontato__form" data-form="data-form">
+                        <div class="input-container">
+                            <input class="formcontato__input campo-invalido" type="text" id="nome" placeholder="Nome" data-tipo="nome" required>
+                            <span class="input-mensagem-erro">Este campo não está válido</span>
+                        </div>
+                        <div class="input-container">
+                            <input class="formcontato__input campo-invalido" type="email" id="email" placeholder="Email" data-tipo="email" required>
+                            <span class="input-mensagem-erro">Este campo não está válido</span>
+                        </div>
+                        <div class="input-container">
+                            <input class="formcontato__input campo-invalido" type="text" id="assunto" data-tipo="assunto" placeholder="Assunto" maxlength="50" required>
+                            <span class="input-mensagem-erro">Este campo não está válido</span>
+                        </div>
+                        <div class="input-container">
+                            <textarea class="formcontato__textarea campo-invalido" id="mensagem" name="mensagem" maxlength="300" placeholder="Sua mensagem" data-tipo="mensagem" required></textarea>
+                            <span class="input-mensagem-erro">Este campo não está válido</span>
+                        </div>
+                        <button class="formcontato__botao" data-button="data-button">Enviar mensagem</button>
                     </form>
                 </div>
             </div>
